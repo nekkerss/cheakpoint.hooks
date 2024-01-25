@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { Movielist } from './companet/Movielist';
+import { moviedata } from './companet/Moviedata';
+import Addmovie from './companet/Addmovie';
+import Filter from './companet/Filter'
 
-function App() {
+function App(){
+  const [movies, setmovies]= useState(moviedata)
+  const[filterbyname,setFilterbyname]= useState("")
+  const[typeby,setTypeby]= useState("")
+  console.log("aaaa",filterbyname);
+  console.log("zzzzz",typeby);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Filter 
+      typeby={typeby} 
+      setTypeby={setTypeby} 
+      setFilterbyname={setFilterbyname} 
+      
+      />
+      <br/>
+    <Movielist  movies={movies}  key={Math.floor} 
+    filterbyname={filterbyname} typeby={typeby}
+    />
+    <Addmovie setmovies={setmovies} movies={movies}/>
     </div>
   );
 }
-
 export default App;
