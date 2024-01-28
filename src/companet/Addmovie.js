@@ -1,6 +1,7 @@
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material'
 import React, { useState } from 'react'
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 const Addmovie = ({ setmovies, movies }) => {
   const [name, setname] = useState("")
   const [directedby, setdirectedby] = useState("")
@@ -8,7 +9,7 @@ const Addmovie = ({ setmovies, movies }) => {
   const [type, settype] = useState("")
   const [time, settime] = useState("")
   const [pic, setpic] = useState("")
-
+const navigate=useNavigate()
   const Addmovie = () => {
     setmovies([
       ...movies,
@@ -27,10 +28,11 @@ const Addmovie = ({ setmovies, movies }) => {
     settype("")
     setpic("")
     settime("")
+    navigate("/")
 
   }
   return (
-    <FormControl className='control' sx={{ margin: 20, width: 600 }} >
+    <FormControl className='control' sx={{ margin: 10, width: 600 }} >
       <TextField label="Movie-name" variant="outlined" fullWidth onChange={(e) => setname(e.target.value)} value={name} /><br />
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">type</InputLabel>

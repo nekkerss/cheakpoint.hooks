@@ -17,6 +17,15 @@ image{
   position: relative !important;
   left: 0!important;
   /* margin-left: 0 !important; */
-
+.foott{
+  font-weight: 700;
+  padding: 20px 0;
+  border-top: solid;
+}
+.cardd{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
 
 

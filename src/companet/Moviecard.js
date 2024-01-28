@@ -10,11 +10,11 @@ import '../App.css';
 export const Moviecard = ({ movies: { name, time, directedby, producedby, pic, type } }) => {
     return (
         <div>
-            <Card sx={{ Width: 300 }}>
+            <Card sx={{ Width: 500 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="450"
+                        height="500"
                         image={pic}
                         alt="green iguana"
                     />
