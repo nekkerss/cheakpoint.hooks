@@ -14,7 +14,7 @@ export const Moviecard = ({ movies: { name, time, directedby, producedby, pic, t
                 <CardActionArea>
                     <CardMedia
                         component="img"
-                        height="500"
+                        height="500 "
                         image={pic}
                         alt="green iguana"
                     />
