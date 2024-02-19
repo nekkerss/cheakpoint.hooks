@@ -26,6 +26,11 @@ image{
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  position: relative;
 }
+/* .btnn{
+position: relative;
+bottom: 0;
+} */
 
 
